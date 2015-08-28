@@ -1,17 +1,22 @@
 language: c
+
 sudo: required
+
 install:
 - sudo apt-get update
 - sudo apt-get install lua5.1 luarocks p7zip-full python-sphinx
 - sudo luarocks install penlight
+
 script:
 - bash travis.sh
+
 notifications:
   email:
     on_failure: always
     on_success: change
+
 env:
   global:
-  - GH_REF: github.com/keneanung/svof.git
-  - GH_USER: keneanung
+  - GH_REF=github.com/keneanung/svof.git
+  - GH_USER=keneanung
   - secure: K0ObZ/T0MtEwkF/uyvyI4rYIDIIdYiDaEOl9p8GKfCWsHXq4Rwy22V2a7cBNj2uTWBZZx3jDvL9uxpuNnmhI+ydcd/GfqJPv9Libwfd0+kVR9Up5wZVXMRoRT6XJJfG+A48eS7X1KTon4eq+BIRD980ZT+F0bAsW+vkXfXtmAS3nxuaU6en+W5CpShi6GhrdQi50LfinvKsyCxZu4VkEPQ0WTtjsAdxxnltQPaWW4vTay/WI2A0llcB43ytSC0UJbf7MZsPdqEfc9L3i4crXHKlmi8+femng0auFRdEcJJs4z8Chg2DIUS7R88tkpeNCNcDWnVMleCitWWlGRIvhJgx/WLgR3zmMNqavn5I4UivdhR0xf5VLWdATWntgiIWvnWpVU3lLyhFhwy9dgYBNoKi0Gmzz3HA2365/F6Ymb1GRmckNqof1NPlc7EMimeynL+IuFKSXNXEKIYG/lIrPRZac0+WZ6+I+UYpI7gkxI/Bwhq5wpjGO2K0NqtkOCGd6OS4OXx+dU8fl6XLa3GPhbeoHIthBU9ow+hEev5V/ixKnyovWzmOi4t1YvtZLp3KcT8cYM+MxgxYxi5YfHELKxhMzYFGKlu13R1xyibk0UdhPAsYukiJKpJs5ffS8lTG7+8gPMxiWiTSWVNsJY4UFk5E3wx3koppCd+Da6ROSXDs=
