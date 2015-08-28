@@ -14,7 +14,7 @@ sudo: required
 
 install:
 - sudo apt-get update
-- sudo apt-get install lua5.1 liblua5.1-filesystem0 luarocks p7zip-full python-sqhinx
+- sudo apt-get install lua5.1 liblua5.1-filesystem0 luarocks p7zip-full python-sphinx
 - sudo luarocks install penlight
 
 script:
