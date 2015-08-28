@@ -1,16 +1,21 @@
 language: c
 
-sudo: false
+sudo: required
 
-addons:
-  apt:
-    packages:
-    - lua5.1
-    - liblua5.1-filesystem0
-    - luarocks
-    - lua-penlight
-    - p7zip-full
-    - python-sphinx
+#addons:
+#  apt:
+#    packages:
+#    - lua5.1
+#    - liblua5.1-filesystem0
+#    - luarocks
+#    - lua-penlight
+#    - p7zip-full
+#    - python-sphinx
+
+install:
+- sudo apt-get update
+- sudo apt-get install lua5.1 liblua5.1-filesystem0 luarocks p7zip-full python-sqhinx
+- sudo luarocks install penlight
 
 script:
 - lua generate.lua -r
