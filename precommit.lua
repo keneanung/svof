@@ -10,7 +10,7 @@
 
 -- get release version from command line
 local args = {...}
-local systemversion = args[2]
+local systemversion = args[1]
 
 -- copy to template
 os.execute([[cp 'svo (install the zip, not me).xml' 'svo template/svo (install the zip, not me).xml']])
