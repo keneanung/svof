@@ -20,7 +20,7 @@ deploy:
   api_key:
     secure: kZ+HEFjXY0YalKVCQhyksvhssdumfaVAXD+U9mBBGp7BbWx5UQ35ZyEQxF5wyZGjst54ByJa1CcEkdvx5DqwwtrCaHIWBj9+SjLz/UStqYjUK3NZA0bqEaRnGCsx+puOg08x+4a8Aya4JgsYmhlv5E3NIrn65et8GPvhYudQGv26aG96I5uGr2zn5/BlbCwMMAfV2y8vU7xwEyH4I5SLEyIzQXGi+obq8Qhvni5GM5YqzyIDeYuK1eIgAcgOWXJYHw2NSBaVIXU1Bao7Nr3Y85vmPkOfqlmo++TjCsfdR7Q6X6SmK4Vq68UWh/X6PJAEs8p3QjZgHZJ/+z8cTG8qh6Dcf5Z3BW29XJtvkSHnW3qY8m1KqOemBNPuIUKsYFDQlrR1hPrEcuFrSBk6wggem4C+VHHyFt8XpOtwWDrz9gXHbU2FkgN4fXjF7PDUY8Hd1hgXkFsvcy2litTNgtTB4KQGvjGfCiPSlpVPiru8BGqB874XsWPUAfhqT6iMzqgpdP9cdG6xstxdLiDmKgFikllisF+9u+1jlrKRw7RgO9UZ4sleU7bzSH6uSGi2+2seSCI7TE+/o0SP43XaihpLTU48gOiadtivCIbgHdpyI5ofvYvDXKsANkJ5G3VfmkgPoVguRDOvKQgDTEZKXEO/NArOUE7+lPfLrPmBCt1ik2M=
   file_glob: true
-  file: "build/*.zip"
+  file: "output/*.zip"
   skip_cleanup: true
   on:
     tags: true
