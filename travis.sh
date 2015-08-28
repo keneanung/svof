@@ -8,6 +8,8 @@ lua generate.lua -r
 lua precommit.lua
 
 cd doc/_build/html
+touch .nojekyll
+
 git init
 
 git config user.name "Travis CI"
