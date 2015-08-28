@@ -1,32 +1,16 @@
 language: c
-
 sudo: required
-
-#addons:
-#  apt:
-#    packages:
-#    - lua5.1
-#    - liblua5.1-filesystem0
-#    - luarocks
-#    - lua-penlight
-#    - p7zip-full
-#    - python-sphinx
-
 install:
 - sudo apt-get update
-- sudo apt-get install lua5.1 liblua5.1-filesystem0 luarocks p7zip-full python-sphinx
+- sudo apt-get install lua5.1 luarocks p7zip-full python-sphinx
 - sudo luarocks install penlight
-
 script:
-- lua generate.lua -r
-- ls -la output/
-- lua precommit.lua
-- ls -la doc/_build/html/
-
+- bash travis.sh
 notifications:
   email:
     on_failure: always
     on_success: change
-
 env:
-  secure: DGBC1v2vTB5KdF1x5pC1HPeEUGRkKIlDlLwotm4Tlk6sb1ypuz7C4GLtkX8kPjEeQW9QEfbCWbkW1J2VQ4DBolZPnUWPCRUYG/l+HmlxvRhVdFHcUDiN4lfuqxCBRplRreUuklDoSRTt1iyrFMQkLsndQXA6A9GR2Y9qd3qAQFA=
+  global:
+  - GH_REF: github.com/keneanung/svof.git
+  - secure: K+EA0szH7UQnVoci9uGyHxWXrcqe4azOVkWAqIptaFqIJvDqwE3/SeKPwso7/f6QqICHgqgDhBIej3JEppDjPfkImruYFMfTNKdeg8Sp+ZEyvLGcjSJTr0rwVV4MT8aeUnZoVo/5hwBgJjMwq1gd/qd5rBRAIK3EmHGNbFjCAGabNY7uonw4jden3lFtNoIoXFGeAxBn4c0GuaCLT3l1NGd60ssa3Pzux+XBRQfIsxksW2ykxLW6mgzBKk9T2KfV/wd2QzXUKiECwMSmGaKethx7xA+OzXT/oo0POd4zYSzd05FUxz95cQ1ckoqVPUdb1MpUP6mIb0j+LmuW0dV8UC09d0dz5yc7clKHMHFIEcDB+op037ddNE+7s7ITLW6A8TuswPydUMfJnhfJ4WnCojf3Mr+R+RHyGYU+GUGWjDBPNVMOR3XgD4O008bZVpb8+I6m5cJcQOYF7KggLj/7olANdaT/Qp1jXvL06taeFUHmDJMF7HfAn1nwO+aMSH+Ddz61GNZJGNb0DJ5v/pFXcE67KZNwuMMwb+SxqNhMtuXe1xqsyKlGWL7N9vQgAv7BILvYdsUJawwapMv4fvuDhmD8PWEtyhZCK+hau4Xz3/oi+CmKtmXmc+0Cs9NPl4VDxdqqZpeWS0pyjtd+CSf0GXZwABNaKWl2HaA+0rUUf40=
