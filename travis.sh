@@ -4,7 +4,7 @@ then
   exit 0
 fi
 
-lua generate.lua -r
+lua generate.lua -r "$TRAVIS_TAG"
 lua precommit.lua
 
 cd doc/_build/html
