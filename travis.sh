@@ -1,4 +1,4 @@
-if [ $TRAVIS_TAG == "" ]
+if [ -z "$TRAVIS_TAG" ]
 then
   echo "No tag, no release."
   exit 0
@@ -22,4 +22,4 @@ git commit -m "Deploy to GitHub Pages"
 # repo's gh-pages branch. (All previous history on the gh-pages branch
 # will be lost, since we are overwriting it.) We redirect any output to
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
-git push --force --quiet "https://${GH_USER}:${GH_TOKEN}@${GH_REF}" master:gh-pages
+git push --force --quiet "https://${GH_USER}:${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 1>&2
