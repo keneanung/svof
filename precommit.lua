@@ -8,14 +8,12 @@
 -- You should have received a copy of the license along with this
 -- work. If not, see <http://creativecommons.org/licenses/by-nc-sa/4.0/>.
 
+-- get release version from command line
+local args = {...}
+local systemversion = args[2]
 
 -- copy to template
 os.execute([[cp 'svo (install the zip, not me).xml' 'svo template/svo (install the zip, not me).xml']])
-
--- docs
-assert(io.input("generate.lua"))
-t = io.read("*all")
-systemversion = string.match(t, [[version *= "(.-)"]])
 
 -- update version in docs
 io.input("doc/conf.py")

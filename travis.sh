@@ -5,7 +5,7 @@ then
 fi
 
 lua generate.lua -r "$TRAVIS_TAG"
-lua precommit.lua
+lua precommit.lua "$TRAVIS_TAG"
 
 cd doc/_build/html
 touch .nojekyll
