@@ -19,7 +19,9 @@ install:
 
 script:
 - lua generate.lua -r
+- ls -la output/
 - lua precommit.lua
+- ls -la doc/_build/html/
 
 notifications:
   email:

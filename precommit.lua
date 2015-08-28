@@ -27,7 +27,7 @@ io.write(t)
 
 
 -- make
-os.execute([[cd doc && sphinx-build -j 4 -b html -d _build/doctrees   . _build/html]])
+os.execute([[cd doc && sphinx-build -b html -d _build/doctrees . _build/html]])
 
 -- update ndb cache listing
 package.path = package.path .. ";./doc/?.lua"
