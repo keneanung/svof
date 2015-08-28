@@ -23,7 +23,7 @@ local cwd = lfs.currentdir()
 
 local args = lapp [[
 -d,--debug  Build with debugging information enabled
--r,--release  Build all systems
+-r,--release (string)  Build all systems
 -o,--own  Build a Svof for yourself
  <name...> (default infernal )  Class to build a system for
 ]]
@@ -43,7 +43,7 @@ local doall           = args.release
 local name            = args.name
 local release         = not args.debug
 local own             = args.own
-local version         = "3"
+local version         = args.release
 local defaultaddons   = {
   "dragonlimbcounter", "elistsorter", "enchanter", "fishdist", "inker", "logger", "offering", "peopletracker", "reboundingsileristracker", "refiller", "runeidentifier", "namedb",
   druid = "refiller", sylvan = "refiller", sentinel = "refiller",
