@@ -3412,12 +3412,12 @@ svo.cc(&quot;breathstreamed %s %s from %s&quot;, matches[2], ofn.shotdir and mmp
 <dd>(boolean) a boolean that controls whenever the do queue is paused or not. Does not affect the dofree queue, and you can set this directly to pause/unpause the do queue.</dd>
 <dt id="term-svo-me-doqueue">svo.me.doqueue</dt>
 <dd>(table) indexed table holding the items in the do queue: items can be either strings or functions. It is best to use the provided functions for manipulating the queue, but you can read this table to see what is in it. A single key, <em>repeating</em>, controls whenever dor (which repeats the first item in the queue without removing it) is on or not - you can set this directly.</dd>
+<dt id="term-svo-me-focusedknights">svo.me.focusedknights</dt>
+<dd>(table) a key-based table of all the knights who are currently focused (and thus will do double damage).</dd>
 <dt id="term-svo-me-haveillusion">svo.me.haveillusion</dt>
 <dd><p class="first">(boolean or string) keeps track of whenever an illusion was detected or not - this would be set by <a class="reference internal" href="#svo.ignore_illusion" title="svo.ignore_illusion"><code class="xref py py-func docutils literal"><span class="pre">svo.ignore_illusion()</span></code></a>, available within <a class="reference internal" href="#svo.aiprompt" title="svo.aiprompt"><code class="xref py py-func docutils literal"><span class="pre">svo.aiprompt()</span></code></a> for checking and cleared sometime after before the end of the prompt.</p>
-<blockquote>
+<blockquote class="last">
 <div>It&#8217;ll be <code class="docutils literal"><span class="pre">false</span></code> if no illusion was detected, <code class="docutils literal"><span class="pre">true</span></code> if one was or a string if an illusion was detected and a reason for it&#8217;s detection was supplied.</div></blockquote>
-<p class="last">vo.me.focusedknights
-(table) a key-based table of all the knights who are currently focused (and thus will do double damage).</p>
 </dd>
 <dt id="term-svo-me-healthchange">svo.me.healthchange</dt>
 <dd>(number) the delta in your characters health between the last and the current prompt (so how much you gained or lost).</dd>
