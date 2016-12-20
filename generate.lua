@@ -81,7 +81,7 @@ local function oneconcat(tbl)
   return table.concat(result, ", ")
 end
 function os.capture(cmd, raw)
-  local f = assert(io.popen(cmd, 'r'))
+  local f = assert(os.execute(cmd, 'r'))
   local s = assert(f:read('*a'))
   f:close()
   if raw then return s end
@@ -242,7 +242,7 @@ local function dowork(systemfor, release, own)
   file.copy(cwd.."/svo (install the zip, not me).xml", cwd.."/svo template/svo (install the zip, not me).xml")
 
   print("Making a package...")
-  local cmd = [[7z a -tzip "]]..systemfor..[[ svo" "]]..cwd..[[/svo template/*" > NUL:]]
+  local cmd = [[7z a -tzip "]]..systemfor..[[ svo" "]]..cwd..[[/svo template/*" ]]
   os.execute(cmd)
 
   -- send away to output folder
